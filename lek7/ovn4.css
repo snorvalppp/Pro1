@@ -1,0 +1,21 @@
+p {  /* Selector */
+    color: blue;  /* Property: value */
+    font-family: Arial, sans-serif;  /* Property: value */
+}
+
+body {
+    background-color: antiquewhite;
+    font-size: medium;
+    padding: 20px;
+}
+
+button {
+    background-color: green;
+    color: azure;
+}
+
+#nameInput{
+    padding: 10px;
+    width: 200px;
+
+}

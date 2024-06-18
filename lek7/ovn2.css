@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#header-text {
+    color: blue;
+}
+
+.new-style {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+}
