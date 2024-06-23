@@ -9,23 +9,66 @@
   </head>
   <body>
     <header>
-      <img src="img/logga.png" alt="Bröllopsfotografering" width="50%" />
+      <img src="img/logga.png" alt="Bröllopsfotografering" width="20%" />
     </header>
     <nav>
-      <ul>
-        <li><a href="/Startsida.html">Hem</a></li>
-        <li><a class="active" href="/bokning.html">Bokning</a></li>
-        <li><a href="/bandfoto.html">Pressbilder</a></li>
-        <li><a href="/kontaktsida.html">Kontakt</a></li>
+      <ul class="navbar">
+        <li><a href="/Startsida.html">Home</a></li>
+        <li><a class="active" href="/bokning.html">Contact</a></li>
+        <li><a href="/bandfoto.html">Press</a></li>
+        <li><a href="https://linktr.ee/dullmusic">News</a></li>
+        <div class="social-links">
+          <li>
+            <a href="https://www.facebook.com/hellodullmusic">
+              <img src="img/facebook.webp" width="15px" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/dullmusic/">
+              <img src="img/insta.webp" width="15px" />
+            </a>
+          </li>
+        </div>
       </ul>
     </nav>
     <br />
     <main>
-      <div class="booking-container">
-        <h2>Boka ett datum</h2>
-        <label for="booking-date">Välj datum:</label>
-        <input type="date" id="booking-date" name="booking-date" />
-        <button id="book-now">Boka nu</button>
+      <div class="kontakt">
+        <form
+          id="contactForm"
+          action="#"
+          method="get"
+          onsubmit="return validate()"
+        >
+          <label for="name">Name:</label>
+          <br />
+          <input type="text" id="name" name="name" />
+          <br /><br />
+          <label for="email">Email:</label>
+          <br />
+          <input type="email" id="email" name="email" />
+          <br /><br />
+          <label for="city">City:</label>
+          <br />
+          <input type="text" id="city" name="city" />
+          <br /><br />
+          <label for="message">Message:</label>
+          <br />
+          <textarea id="message" name="message"></textarea>
+          <br /><br />
+          <label for="date">Date:</label>
+          <br />
+          <input
+            type="date"
+            id="start"
+            name="trip-start"
+            value="2024-07-01"
+            min="2024-07-01"
+            max="2030-12-31"
+          />
+          <br /><br />
+          <button type="submit">Send Message</button>
+        </form>
       </div>
     </main>
     <br />

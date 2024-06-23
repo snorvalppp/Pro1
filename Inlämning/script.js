@@ -7,45 +7,41 @@ for (var i = 0; i < thumbnails.length; i++) {
         largeImage.alt = this.alt;
     }
 }
+function validate() {
+  var name = document.getElementById("name");
+  var email = document.getElementById("email");
+  var message = document.getElementById("message");
+  var date = document.getElementById("date");
+  var city = document.getElementById("city");
 
+  var errorMessage = "";
 
-document.getElementById('book-now').onclick = function() {
-    var selectedDate = document.getElementById('booking-date').value;
-    if (selectedDate) {
-      alert('Du har bokat datumet: ' + selectedDate);
-    } else {
-      alert('Vänligen välj ett datum för bokning.');
-    }
-  };
+  if (name.value === "") {
+    errorMessage += "Please enter your name.\n";
+  }
 
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email.value)) {
+    errorMessage += "Please enter a valid email address.\n";
+  }
 
-  function validateForm() {
+  if (message.value === "") {
+    errorMessage += "Please enter a message.\n";
+  }
 
-    var name = document.getElementById("name");
-    var email = document.getElementById("email");
-    var message = document.getElementById("message");
+  if (date.value === "") {
+    errorMessage += "Please select a date.\n";
+  }
 
-    var errorMessage = "";
+  if (city.value === "") {
+    errorMessage += "Please enter a city.\n";
+  }
 
-    if (name.value === "") {
-    errorMessage += "Vänligen fyll i ditt namn.\n";
-    }
-
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email.value)) {
-    
-    errorMessage += "Vänligen ange en giltig e-ßpostadress.\n";
-    
-    }
-
-    if (message.value === "") {
-    errorMessage += "Vänligen ange ett meddelande.";
-    }
-
-    if (errorMessage !== "") {
+  if (errorMessage !== "") {
     alert(errorMessage);
-    return false; 
-    }
+    return false;
+  }
 
-    return true;
-    }
+  alert("Thank you for your message!");
+  return true;
+}
