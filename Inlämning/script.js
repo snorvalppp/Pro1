@@ -11,7 +11,7 @@ function validate() {
   var name = document.getElementById("name");
   var email = document.getElementById("email");
   var message = document.getElementById("message");
-  var date = document.getElementById("date");
+  var date = document.getElementById("start");
   var city = document.getElementById("city");
 
   var errorMessage = "";
