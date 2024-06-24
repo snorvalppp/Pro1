@@ -1,5 +1,5 @@
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
   color: rgb(0, 0, 0);
   background-color: #f8e493;
 }
@@ -106,7 +106,7 @@ section {
   width: 100px;
   height: 100px;
   object-fit: cover;
-  cursor: pointer;
+  cursor:zoom-in;
   transition: transform 0.2s;
 }
 
@@ -144,7 +144,7 @@ section {
 
 .kontakt {
   border: 2px solid black;
-  width: 95%;
+  width: calc(95%);
   margin: 15px;
   padding: 15px;
   border-radius: 15px;
